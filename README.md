@@ -19,7 +19,6 @@ git clone https://github.com/Vedant123-Pande/PRIORITIZER
 .git
 cd PythonProject
 project.py
-
 *(Requires Python 3.6+)*
 
 ## Usage
