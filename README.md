@@ -15,7 +15,8 @@ A command-line Python assistant for managing and prioritizing study tasks based 
 
 ## Installation
 
-git clone https://github.com/Vedant123-Pande/PythonProject.git
+git clone https://github.com/Vedant123-Pande/PRIORITIZER
+.git
 cd PythonProject
 project.py
 
