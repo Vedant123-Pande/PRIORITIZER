@@ -105,7 +105,6 @@ class StudyTaskPrioritizer:
             elif choice == '3':
                 self.get_top_priority_task()
             elif choice == '4':
-                print("\nKeep up the great work! Goodbye! 👋\n")
                 break
             else:
                 print("Invalid option. Please enter 1, 2, 3, or 4.")
