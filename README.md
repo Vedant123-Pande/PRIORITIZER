@@ -1,7 +1,6 @@
 # PRIORITIZER
 # PythonProject
 vityarthi final project
-# StudyTaskPrioritizer
 
 A command-line Python assistant for managing and prioritizing study tasks based on urgency and importance, helping students stay organized and focused.
 
@@ -50,4 +49,4 @@ Tasks prioritized successfully!
 
 --- Prioritized Study Task List ---
 Rank | Task Name | Importance | Urgency | Priority
-1 | Read Calculus Chapter 4 | 5 | 4 | 20
+1 | Read| 5 | 4 | 20
