@@ -1,7 +1,7 @@
 class StudyTaskPrioritizer:
     def __init__(self):
         self.tasks = []
-
+        
     def _get_valid_score(self, prompt: str):
         """Get a valid score between 1 and 5 from user input."""
         while True:
