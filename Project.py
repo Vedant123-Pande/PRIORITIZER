@@ -15,9 +15,9 @@ class StudyTaskPrioritizer:
                 print("Invalid input. Please enter a whole number.")
 
     def add_task_interactive(self):
-        print("\n" + "="*50)
-        print("          ADD NEW STUDY TASK")
-        print("="*50)
+        print()
+        print("ADD NEW STUDY TASK")
+        print()
         
         name = input("Task description: ").strip()
         while not name:
@@ -36,9 +36,9 @@ class StudyTaskPrioritizer:
             'priority_score': priority_score
         }
         self.tasks.append(task)
-        print(f"\nTask added! → '{name}'")
+        print(f"Task added! '{name}'")
         print(f"Priority Score: {priority_score} (Importance×Urgency = {importance}×{importance}×{urgency})")
-        print("="*50)
+        print()
 
     def prioritize_tasks(self):
         """Sort tasks by priority score descending."""
@@ -50,11 +50,11 @@ class StudyTaskPrioritizer:
             return
 
         self.prioritize_tasks()
-        print("\n" + "="*90)
-        print("                PRIORITIZED STUDY TASK LIST")
-        print("="*90)
+        print()
+        print("PRIORITIZED STUDY TASK LIST")
+        print()
         print(f"{'Rank':<4} {'Task':<40} {'Imp':<6} {'Urg':<6} {'Priority':<10} {'Category'}")
-        print("-"*90)
+        print()
 
         for i, task in enumerate(self.tasks, 1):
             category = (
@@ -66,29 +66,29 @@ class StudyTaskPrioritizer:
             print(f"{i:<4} {task['name']:<40} {task['importance']:<6} {task['urgency']:<6} "
                   f"{task['priority_score']:<10} {category}")
 
-        print("-"*90)
+        print()
 
     def get_top_priority_task(self):
         if not self.tasks:
-            print("\nNo tasks available. Add one first!")
+            print("No tasks available. Add one first!")
             return
 
         self.prioritize_tasks()
         top = self.tasks[0]
         category = "CRITICAL – DO FIRST!" if top['priority_score'] >= 16 else "High Priority"
 
-        print("\n" + "!"*60)
-        print("                   TOP PRIORITY TASK")
-        print("!"*60)
+        print()
+        print("TOP PRIORITY TASK")
+        print()
         print(f"   Task: {top['name']}")
         print(f"   Priority Score: {top['priority_score']} ({top['importance']} × {top['urgency']})")
         print(f"   Category: {category}")
         print("   Get this done now to reduce stress and make progress!")
-        print("!"*60)
+        print()
 
     def run(self):
         print("Welcome to Your Study Task Prioritizer!")
-        print("Based on the Eisenhower Principle (Importance × Urgency)\n")
+        print()
 
         while True:
             print("\n--- Menu ---")
