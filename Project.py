@@ -37,7 +37,7 @@ class StudyTaskPrioritizer:
         }
         self.tasks.append(task)
         print(f"Task added! '{name}'")
-        print(f"Priority Score: {priority_score} (Importance×Urgency = {importance}×{importance}×{urgency})")
+        print(f"Priority Score: {priority_score} (Importance×Urgency = {importance}×{urgency})")
         print()
 
     def prioritize_tasks(self):
