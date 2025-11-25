@@ -79,7 +79,7 @@ If you'd like to:
 these would be nice improvements.
 
 ## License
-This project is open — feel free to use it and modify it. Add a license file (e.g., MIT) if you want a formal license.
+This project is open — feel free to use it and modify it.
 
 ## Author
 Vedant123-Pande
