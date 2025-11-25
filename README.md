@@ -1,52 +1,87 @@
 # PRIORITIZER
-# PythonProject
-vityarthi final project
 
-A command-line Python assistant for managing and prioritizing study tasks based on urgency and importance, helping students stay organized and focused.
+A small, friendly command-line Study Task Prioritizer that helps you decide what to work on next. Enter tasks, rate their importance and urgency (1–5), and PRIORITIZER computes a priority score and suggests what to do.
+
+Project.py implements the CLI.
 
 ## Features
+- Add tasks with a name, importance (1–5) and urgency (1–5)
+- Priority score = importance × urgency
+- Sorts tasks by priority score (highest first)
+- Shows the top task with a quick action suggestion:
+  - Critical tasks (score ≥ 16) — "DO THIS NOW!"
+  - High importance — "Plan it"
+  - High urgency — "Delegate/Maybe"
+  - Otherwise — "Do later"
 
-- Add new study tasks interactively
-- Rate tasks by importance and urgency (scale 1–5)
-- Calculates a priority score for each task
-- Displays prioritized study task list
-- Shows your top-priority task to focus on next
+## Requirements
+- Python 3.6 or newer
+- No external packages required
 
 ## Installation
-
-git clone https://github.com/Vedant123-Pande/PRIORITIZER
-.git
-cd PythonProject
-project.py
-*(Requires Python 3.6+)*
+1. Clone the repository:
+   git clone https://github.com/Vedant123-Pande/PRIORITIZER.git
+2. Change into the project directory:
+   cd PRIORITIZER
 
 ## Usage
+Run the CLI script:
+python Project.py
 
-When you run the program, you will see:
+You will see a menu:
+1. Add a new task
+2. Show all tasks (sorted)
+3. What's my #1 task right now?
+4. Exit
 
---- Time Management Assistant Menu ---
+When adding a task you'll be prompted for:
+- Task name (cannot be empty)
+- Importance (1 = meh, 5 = exam tomorrow)
+- Urgency (1 = whenever, 5 = due in 2 hours)
 
-Add a new task
+Example session
+```
+Welcome to Your Study Task Prioritizer!
 
-Display prioritized tasks
+--- Menu ---
+1. Add a new task
+2. Show all tasks (sorted)
+3. What's my #1 task right now?
+4. Exit
 
-Show top priority task
+What do you want to do? (1-4): 1
 
-Exit
-Enter your choice (1-4):
+=== ADD NEW TASK ===
+What do you have to do? Finish math homework
+How important is it? (1 = meh, 5 = exam tomorrow) → 5
+How urgent is it? (1 = whenever, 5 = due in 2 hours) → 4
+Added! → Finish math homework (Priority: 20)
+```
 
+Show all (sorted) will display tasks with Importance, Urgency, Score and a suggested action.
 
-Choose an option by entering the corresponding number.
+## How scoring works
+- Score = importance × urgency (range 1–25)
+- Tasks are sorted by this score in descending order
+- Suggestions are based on importance and urgency thresholds:
+  - imp ≥ 4 and urg ≥ 4 → DO THIS NOW!
+  - imp ≥ 4 → Plan it
+  - urg ≥ 4 → Delegate/Maybe
+  - otherwise → Do later
 
-- Add tasks with descriptions, importance, and urgency ratings.
-- View all tasks sorted by priority.
-- Find out your most urgent and important study task.
+## Contributing
+Contributions, bug reports and suggestions are welcome. Open an issue or submit a pull request.
 
-## Example
+If you'd like to:
+- Add persistence (save/load tasks to a file)
+- Add tags or due dates
+- Add interactive filtering or search
+these would be nice improvements.
 
-Task 'Read' added with Priority Score: 20
-Tasks prioritized successfully!
+## License
+This project is open — feel free to use it and modify it. Add a license file (e.g., MIT) if you want a formal license.
 
---- Prioritized Study Task List ---
-Rank | Task Name | Importance | Urgency | Priority
-1 | Read| 5 | 4 | 20
+## Author
+Vedant123-Pande
+
+Enjoy organizing your study tasks!
